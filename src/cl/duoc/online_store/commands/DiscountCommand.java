@@ -1,21 +1,20 @@
 package cl.duoc.online_store.commands;
 
-import cl.duoc.online_store.components.Component;
-import cl.duoc.online_store.decorators.SeasonalDiscountDecorator;
+import cl.duoc.online_store.components.Product;
 
 public class DiscountCommand implements Command {
 
-    private Component product;
-    private double discountPercentage;
+    private final Product product;
+    private final double discountPercentage;
 
-    public DiscountCommand(Component product, double discountPercentage) {
+    public DiscountCommand(Product product, double discountPercentage) {
         this.product = product;
         this.discountPercentage = discountPercentage;
     }
 
     @Override
     public void ejecutar() {
-        Component discountedProduct = new SeasonalDiscountDecorator(product, discountPercentage);
-        System.out.println("Producto con descuento aplicado: " + discountedProduct);
+        product.applyDiscount(discountPercentage);
+        System.out.println("Producto con descuento aplicado: " + product);
     }
 }
