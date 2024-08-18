@@ -1,7 +1,6 @@
 package cl.duoc.online_store.decorators;
 
 import cl.duoc.online_store.components.Component;
-import cl.duoc.online_store.decorators.Decorator;
 
 public class SeasonalDiscountDecorator extends Decorator {
 

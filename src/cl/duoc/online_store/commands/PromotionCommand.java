@@ -2,7 +2,6 @@ package cl.duoc.online_store.commands;
 
 import cl.duoc.online_store.components.Component;
 import cl.duoc.online_store.decorators.PromotionDecorator;
-import cl.duoc.online_store.commands.Command;
 
 public class PromotionCommand implements Command {
 
